@@ -6,13 +6,13 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 06:40:42 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/11/20 06:53:15 by ajamoun          ###   ########.fr       */
+/*   Updated: 2024/11/28 04:24:37 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putptr(void *ptr, int *count)
+void	ft_putptr(void *ptr, int *count)
 {
 	char	*hex;
 
