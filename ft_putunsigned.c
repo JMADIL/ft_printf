@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_puthex.c                                        :+:      :+:    :+:   */
+/*   ft_putunsigned.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/20 04:15:27 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/11/29 05:00:03 by ajamoun          ###   ########.fr       */
+/*   Created: 2024/11/29 04:45:24 by ajamoun           #+#    #+#             */
+/*   Updated: 2024/11/29 04:55:46 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_puthex(unsigned int n, char *hex, int *count)
+void	ft_putunsigned(unsigned int n, int *count)
 {
-	int	hexi;
-
-	if (n >= 16)
-		ft_puthex(n / 16, hex, count);
-	hexi = n % 16;
-	ft_putchar(hex[hexi], count);
+	if (n >= 0 && n <= 9)
+	{
+		ft_putchar(n + 48, count);
+	}
+	else
+	{
+		ft_putunsigned(n / 10, count);
+		ft_putchar((n % 10) + 48, count);
+	}
 }

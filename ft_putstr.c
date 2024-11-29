@@ -6,7 +6,7 @@
 /*   By: ajamoun <ajamoun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 01:12:56 by ajamoun           #+#    #+#             */
-/*   Updated: 2024/11/20 06:53:18 by ajamoun          ###   ########.fr       */
+/*   Updated: 2024/11/29 05:11:32 by ajamoun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putstr(char *str, int *count)
 	i = 0;
 	if (!str)
 	{
-		write(1, "(null)", 6);
+		ft_putstr("(null)", count);
 		return ;
 	}
 	while (str[i])
